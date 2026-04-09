@@ -1,0 +1,259 @@
+:root {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: #f8fafc;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.28), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(244, 114, 182, 0.24), transparent 30%),
+    linear-gradient(135deg, #0f172a 0%, #172554 45%, #1e1b4b 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+}
+
+.auth-layout {
+  width: min(1100px, 100%);
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.auth-copy {
+  padding: 16px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #bfdbfe;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.auth-copy h1,
+.dashboard-card h1 {
+  font-size: clamp(2.3rem, 5vw, 4.5rem);
+  line-height: 1.04;
+  margin-bottom: 16px;
+}
+
+.support-text {
+  max-width: 540px;
+  color: rgba(226, 232, 240, 0.84);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.feature-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.feature-strip span,
+.profile-item span {
+  color: #cbd5e1;
+}
+
+.feature-strip span {
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(125, 211, 252, 0.2);
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
+  backdrop-filter: blur(18px);
+}
+
+.auth-card,
+.dashboard-card,
+.profile-card {
+  padding: 32px;
+}
+
+.auth-card h2,
+.profile-card h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  margin-bottom: 24px;
+  color: #cbd5e1;
+}
+
+.form-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.form-grid input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  outline: none;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-grid input::placeholder {
+  color: #cbd5e1;
+}
+
+.form-grid input:focus {
+  border-color: #38bdf8;
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.16);
+}
+
+.primary-btn,
+.secondary-btn,
+.link-btn {
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 14px 20px;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.primary-btn {
+  color: #082f49;
+  background: linear-gradient(135deg, #67e8f9, #f9a8d4);
+  box-shadow: 0 14px 30px rgba(103, 232, 249, 0.2);
+}
+
+.secondary-btn {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.link-btn:hover {
+  transform: translateY(-2px);
+}
+
+.action-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.dashboard-card,
+.profile-card {
+  width: min(680px, 100%);
+  text-align: center;
+}
+
+.profile-grid {
+  display: grid;
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.profile-item {
+  text-align: left;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.profile-item strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.form-link {
+  margin-top: 18px;
+  color: #cbd5e1;
+}
+
+.link-btn {
+  padding: 0;
+  color: #7dd3fc;
+  background: transparent;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .auth-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-copy {
+    text-align: center;
+    padding: 0;
+  }
+
+  .feature-strip,
+  .action-row {
+    justify-content: center;
+  }
+
+  .auth-card,
+  .dashboard-card,
+  .profile-card {
+    padding: 24px;
+  }
+
+  .action-row {
+    flex-direction: column;
+  }
+}
